@@ -56,7 +56,7 @@ article {
     align-items: center;
     display: none;
 }
-article>div:first-child {
+article div:first-child {
     display: flex;
 }
 
@@ -70,7 +70,10 @@ article>div:first-child {
 
 #contact {
     background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 .ani {
     width: 100%;
@@ -101,7 +104,21 @@ article>div:first-child {
 .ani#rec {
     background-color: skyblue;
     animation-name: rec;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.sns {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: sns;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
 
 @keyframes cir {
     to {
@@ -125,5 +142,14 @@ article>div:first-child {
     to {
         width: 40vh;
         height: 40vh;
+    }
+}
+
+@keyframes sns {
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
