@@ -1,4 +1,9 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&display=swap');
+
+*{
+    font-family: 'Gemunu Libre', sans-serif !important;
+}
 
 html, body {
     width: 100vw;
@@ -28,7 +33,7 @@ header > .menu {
 }
 
 .menu > a {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
     color: #CB437C;
@@ -68,6 +73,11 @@ article {
     display: none;
     background-color: white;
 }
+
+.articles#home {
+    flex-direction: column;
+}
+
 article .articles:first-child {
     display: flex;
 }
@@ -102,6 +112,35 @@ article .articles:first-child {
     background-color: rgba(0, 0, 0, 0.406);
 }
 
+.cir__context {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: cir__context;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.cir__context p {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.cir__context__too {
+    transition: 2s;
+}
+
+.cir__context__too:hover {
+    font-size: 3em;
+}
 
 #cir p {
     width: 100%;
@@ -172,6 +211,12 @@ article .articles:first-child {
         opacity: 1;
     }
     
+}
+
+@keyframes cir__context {
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes tri {
