@@ -6,7 +6,7 @@ html, body {
 }
 
 html {
-    background-color: black;
+    background-color: white;
 }
 
 header {
@@ -28,20 +28,31 @@ header > .menu {
 }
 
 .menu > a {
+    font-size: 1em;
+    font-weight: bold;
     text-decoration: none;
-    color: #fff;
+    color: #CB437C;
 }
- 
-.menu > a:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
-    cursor: pointer;
+
+.menu a.under {
+    text-decoration : underline;
+    text-decoration-color : #CB437C;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.2em;
 }
 
 .menu>a:first-child {
-    text-decoration : underline;
-    text-decoration-color : white;
+    text-decoration-color : #CB437C;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.2em;
 }
+ 
+.menu > a:hover {
+    cursor: pointer;
+    text-decoration : underline;
+    text-decoration-color : #CB437C;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.2em;}
 
 article {
     width : 100%;
@@ -55,23 +66,10 @@ article {
     justify-content: center;
     align-items: center;
     display: none;
+    background-color: white;
 }
-article div:first-child {
+article .articles:first-child {
     display: flex;
-}
-
-#home {
-    background-color: red;
-}
-
-#about {
-    background-color: green;
-}
-
-#contact {
-    background-color: blue;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 
@@ -90,26 +88,30 @@ article div:first-child {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0;
+    border: 1em solid #CB437C;
+
 }
 
 .ani#tri {
     animation-name: tri;
     width: 0;
     height: 0;
-    border-bottom: 100vh solid green;
-    border-right: 50vw solid green;
-    border-left: 50vw solid green;
+    border-bottom: 100vh solid white;
+    border-right: 50vw solid white;
+    border-left: 50vw solid white;
 }
 
 .ani#rec {
-    background-color: skyblue;
+    border: 1em solid #CB437C;
+    background-color: transparent;
     animation-name: rec;
     display: flex;
     flex-wrap: wrap;
 }
 
 .sns {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,12 +121,23 @@ article div:first-child {
     opacity: 0;
 }
 
+.sns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sns__img {
+    width: 60%;
+    height: 60%;
+}
 
 @keyframes cir {
     to {
         width: 40vh;
         height: 40vh;
         border-radius: 40vh;
+        opacity: 1;
     }
     
 }
@@ -132,21 +145,23 @@ article div:first-child {
 @keyframes tri {
     to {
         /** n X 1.7320(root 3) **/
-        border-bottom: 34.64vh solid magenta;
+        border-bottom: 34.64vh solid #CB437C;
         border-left: 20vh solid transparent;
         border-right: 20vh solid transparent;
     }
 }
 
 @keyframes rec {
-    to {
+    50% {
+    }
+    100% {
         width: 40vh;
         height: 40vh;
     }
 }
 
 @keyframes sns {
-    80% {
+    60% {
         opacity: 0;
     }
     100% {

@@ -4,9 +4,9 @@ function visibility(e) {
         item.style.display="none";
     });
     [...document.getElementsByClassName("menu__button")].map(item => {
-        item.style.textDecoration="none";
+        item.className = "menu__button";
+        
     })
     document.getElementById(value).style.display="flex";
-    e.style.textDecoration="underline";
-    e.style.textDecorationColor="white";
+    e.className="menu__button under";
 }
