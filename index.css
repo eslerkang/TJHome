@@ -90,9 +90,27 @@ article .articles:first-child {
     background-size: cover;
     opacity: 0;
     border: 1em solid #CB437C;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.ani#cir:hover {
+    background-blend-mode: lighten;
+}
+
+
+#cir p {
+    text-align: center;
+    font-size: 1.5em;
+    color: transparent;
+    transition: 1s;
+}
+
+#cir p:hover {
+    color: white;
+}
+ 
 .ani#tri {
     animation-name: tri;
     width: 0;
