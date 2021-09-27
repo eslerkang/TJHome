@@ -166,10 +166,19 @@ article .articles:first-child {
 
 .tri__context__up {
     width: 100%;
-    height: 20%;
+    height: 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.tri__context__up p {
+    font-size: 1.5em;
+}
+
+.tri__context__up p:first-child {
+    font-weight: bold;
 }
 
 .ani#rec {
