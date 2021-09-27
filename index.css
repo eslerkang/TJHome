@@ -84,7 +84,7 @@ article .articles:first-child {
 
 .ani#cir {
     animation-name: cir;
-    background-image: url('../img/T_J_H.png');
+    background-image: url('./img/T_J_H.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
