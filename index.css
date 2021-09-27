@@ -171,6 +171,11 @@ article .articles:first-child {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation-name: tri__context__up;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
 }
 
 .tri__context__up p {
@@ -245,6 +250,13 @@ article .articles:first-child {
         border-bottom: 34.64vh solid #CB437C;
         border-left: 20vh solid transparent;
         border-right: 20vh solid transparent;
+    }
+}
+
+
+@keyframes tri__context__up {
+    to {
+        opacity: 1;
     }
 }
 
