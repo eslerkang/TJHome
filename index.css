@@ -234,6 +234,7 @@ article .articles:first-child {
 .tri__context__bold {
     font-weight: bold;
 }
+
 .tri__context__over__box {
     flex-shrink: 0;
     height: 1.8em;
