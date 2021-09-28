@@ -1,3 +1,4 @@
+//Function for managing change of pages(home, about, contact) and change of underline-decoration of menu
 function visibility(e) {
     value = e.text.toLowerCase();
     [...document.getElementsByClassName("articles")].map(item => {
@@ -11,6 +12,7 @@ function visibility(e) {
     e.className="menu__button under";
 }
 
+//Function for copying email address at clipboard
 function copyEmail() {
     t = document.createElement("textarea");
     document.body.appendChild(t);

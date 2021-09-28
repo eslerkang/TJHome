@@ -1,5 +1,5 @@
-@import "reset.css";
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&display=swap');
+@import "reset.css"; /* css file to reset css */
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&display=swap'); /* Gemunu Libre font for whole page from Google Font */
 
 *{
     font-family: 'Gemunu Libre', sans-serif !important;
@@ -23,6 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 header > .menu {
@@ -57,7 +58,8 @@ header > .menu {
     text-decoration : underline;
     text-decoration-color : #CB437C;
     text-underline-offset: 0.1em;
-    text-decoration-thickness: 0.2em;}
+    text-decoration-thickness: 0.2em;
+}
 
 article {
     width : 100%;
@@ -164,26 +166,75 @@ article .articles:first-child {
     border-left: 50vw solid white;
 }
 
-.tri__context__up {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation-name: tri__context__up;
+.tri__context {
+    animation-name: tri__context;
     animation-delay: 3s;
     animation-duration: 2s;
     animation-fill-mode: both;
     opacity: 0;
 }
 
-.tri__context__up p {
+.tri__context__up {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tri__context__down {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tri__context p {
     font-size: 1.5em;
 }
 
-.tri__context__up p:first-child {
+.tri__context__bold {
     font-weight: bold;
+}
+.tri__context__over__box {
+    flex-shrink: 0;
+    height: 1.8em;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tri__context__over:hover {
+    animation-play-state: paused;
+}
+
+.tri__context__over {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    animation: linear infinite;
+    animation-delay: 5s;
+    top: 30px;
+}
+
+.like {
+    animation-name: marquee__like;
+    animation-duration: 18s;
+}
+
+.interest {
+    animation-name: marquee__interest;
+    animation-duration: 14s;
+}
+
+.tri__context__over p {
+    color: #cb437c;
 }
 
 .ani#rec {
@@ -254,9 +305,27 @@ article .articles:first-child {
 }
 
 
-@keyframes tri__context__up {
+@keyframes tri__context {
     to {
         opacity: 1;
+    }
+}
+
+@keyframes marquee__like {
+    from {
+        top:30px;
+    }
+    to{
+        top:-650px;
+    }
+}
+
+@keyframes marquee__interest {
+    from {
+        top:30px;
+    }
+    to {
+        top:-550px;
     }
 }
 
