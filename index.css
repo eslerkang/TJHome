@@ -166,6 +166,41 @@ article .articles:first-child {
     border-left: 50vw solid white;
 }
 
+#tri__little {
+    width: 0;
+    height: 0;
+    /** n X 1.7320(root 3) **/
+    border-bottom: 27.712vh solid white;
+    border-right: 16vh solid transparent;
+    border-left: 16vh solid transparent;
+    position: relative;
+    top: 4.5vh;
+    left:-16vh;
+    animation-name: tri__little;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+#tri__little>a {
+    display: block;
+    width: 30vh;
+    position: relative;
+    top: 11vh;
+    left:-15vh;
+    font-size: 1em;
+    text-decoration: none;
+    color: #CB437C;
+    cursor: pointer;
+    text-align: center;
+    transition: 1s;
+}
+
+#tri__little>a:hover {
+    font-size: 1.5em;
+}
+
 .tri__context {
     animation-name: tri__context;
     animation-delay: 3s;
@@ -301,6 +336,12 @@ article .articles:first-child {
         border-bottom: 34.64vh solid #CB437C;
         border-left: 20vh solid transparent;
         border-right: 20vh solid transparent;
+    }
+}
+
+@keyframes tri__little {
+    to {
+        opacity: 1;
     }
 }
 
